@@ -1,6 +1,11 @@
-# jsonspecs-cli
+# JSONSpecs CLI
 
-CLI backend and local studio host for `jsonspecs` rules projects.
+[![CI](https://github.com/catindev/jsonscpecs-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/catindev/jsonscpecs-cli/actions)
+[![npm](https://img.shields.io/npm/v/jsonspecs-cli)](https://www.npmjs.com/package/jsonspecs-cli)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Node 20+](https://img.shields.io/badge/Node-20%2B-green)](https://nodejs.org/)
+
+CLI backend and local studio host for [jsonspecs](https://www.npmjs.com/package/jsonspecs) rules projects.
 
 ## Commands
 
@@ -46,16 +51,16 @@ module.exports = {
 
       const n = Number(got.value);
       return { ok: Number.isFinite(n) && n > 0, actual: got.value };
-    }
+    },
   },
   predicate: {},
   meta: {
     operators: {
       amount_gt_zero: {
-        description: 'должно быть больше нуля'
-      }
-    }
-  }
+        description: "должно быть больше нуля",
+      },
+    },
+  },
 };
 ```
 
