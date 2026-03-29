@@ -44,8 +44,8 @@ npm link
 Create a new rules project:
 
 ```bash
-jsonspecs init nominal-beneficiaries
-cd nominal-beneficiaries
+jsonspecs init online_store
+cd online_store
 ```
 
 Validate the project:
@@ -71,7 +71,7 @@ Then open `http://localhost:3100`.
 ## Rules project structure
 
 ```text
-nominal-beneficiaries/
+online_store/
   rules/
     library/
     entrypoints/
@@ -96,8 +96,8 @@ Minimal shape:
 ```json
 {
   "project": {
-    "id": "nominal-beneficiaries",
-    "title": "Nominal beneficiaries",
+    "id": "online_store",
+    "title": "Online store",
     "description": "Rules project on jsonspecs",
     "language": "ru"
   },
@@ -150,16 +150,16 @@ module.exports = {
 
       const n = Number(got.value);
       return { ok: Number.isFinite(n) && n > 0, actual: got.value };
-    }
+    },
   },
   predicate: {},
   meta: {
     operators: {
       amount_gt_zero: {
-        description: 'должно быть больше нуля'
-      }
-    }
-  }
+        description: "must be greater than zero",
+      },
+    },
+  },
 };
 ```
 
@@ -167,10 +167,10 @@ module.exports = {
 
 Custom operators should use the runtime context passed by `jsonspecs`:
 
-- `ctx.get(path)` — reads a payload field in a stable way
-- `ctx.has(path)` — checks field presence
-- `ctx.payload` — raw payload map
-- `ctx.getDictionary(id)` — access a dictionary by id
+- `ctx.get(path)` reads a payload field in a stable way
+- `ctx.has(path)` checks field presence
+- `ctx.payload` raw payload map
+- `ctx.getDictionary(id)` access a dictionary by id
 
 Project-local operator packs should **not** import `deepGet` or `jsonspecs` directly.
 
