@@ -1,42 +1,20 @@
 {
   "name": "jsonspecs-cli",
-  "version": "1.0.0",
-  "description": "CLI and local studio for jsonspecs rules projects",
+  "version": "1.1.0",
+  "description": "CLI backend and local studio host for jsonspecs rules projects",
   "type": "commonjs",
   "bin": {
     "jsonspecs": "bin/jsonspecs.js"
   },
   "main": "index.js",
   "license": "MIT",
-  "author": {
-    "name": "jsonspecs contributors"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/catindev/jsonscpecs-cli.git"
-  },
-  "bugs": {
-    "url": "https://github.com/catindev/jsonscpecs-cli/issues"
-  },
-  "homepage": "https://github.com/catindev/jsonscpecs-cli#readme",
-  "keywords": [
-    "validation",
-    "rules-engine",
-    "json",
-    "declarative",
-    "cli",
-    "studio",
-    "business-rules"
-  ],
   "engines": {
     "node": ">=20"
   },
   "scripts": {
-    "test": "node --test tests/*.test.js",
-    "prepublishOnly": "npm test"
+    "test": "node --test tests/*.test.js"
   },
   "dependencies": {
-    "ejs": "^3.1.10",
     "express": "^5.2.1",
     "jsonspecs": "^1.1.0"
   }

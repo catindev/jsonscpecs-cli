@@ -2,7 +2,7 @@
 const { CliError } = require('../lib/errors');
 
 function printHelp() {
-  console.log(`jsonspecs-cli v1.0.0\n\nCommands:\n  jsonspecs init <project-name>\n  jsonspecs studio\n  jsonspecs build\n  jsonspecs validate\n`);
+  console.log(`jsonspecs-cli v1.2.0\n\nCommands:\n  jsonspecs init <project-name>\n  jsonspecs studio\n  jsonspecs build\n  jsonspecs validate\n`);
 }
 
 (async function main() {
