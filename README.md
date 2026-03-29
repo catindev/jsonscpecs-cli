@@ -1,11 +1,6 @@
-# JSONSpecs CLI
+# jsonspecs-cli
 
-[![CI](https://github.com/catindev/jsonscpecs-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/catindev/jsonscpecs-cli/actions)
-[![npm](https://img.shields.io/npm/v/jsonspecs-cli)](https://www.npmjs.com/package/jsonspecs-cli)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Node 20+](https://img.shields.io/badge/Node-20%2B-green)](https://nodejs.org/)
-
-CLI backend and local studio host for [jsonspecs](https://www.npmjs.com/package/jsonspecs) rules projects.
+CLI backend and local studio host for `jsonspecs` rules projects.
 
 ## Commands
 
@@ -51,16 +46,16 @@ module.exports = {
 
       const n = Number(got.value);
       return { ok: Number.isFinite(n) && n > 0, actual: got.value };
-    },
+    }
   },
   predicate: {},
   meta: {
     operators: {
       amount_gt_zero: {
-        description: "должно быть больше нуля",
-      },
-    },
-  },
+        description: 'должно быть больше нуля'
+      }
+    }
+  }
 };
 ```
 
@@ -68,10 +63,10 @@ module.exports = {
 
 Custom operators should use the runtime context passed by `jsonspecs`:
 
-- `ctx.get(path)` reads a payload field in a stable way
-- `ctx.has(path)` checks field presence
-- `ctx.payload` raw payload map
-- `ctx.getDictionary(id)` access a dictionary by id
+- `ctx.get(path)` — reads a payload field in a stable way
+- `ctx.has(path)` — checks field presence
+- `ctx.payload` — raw payload map
+- `ctx.getDictionary(id)` — access a dictionary by id
 
 Project-local operator packs should **not** import `deepGet` or `jsonspecs` directly.
 
